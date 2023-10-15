@@ -1,5 +1,6 @@
 CC=gcc
 CFLAGS= -g -std=c99 -Wall -Wextra -Werror -pedantic
+GCCOPTIONS= -mbmi2
 SRC=src
 OBJ=obj
 SRCS=$(wildcard $(SRC)/*.c)
@@ -11,10 +12,10 @@ BIN=$(BINDIR)/main
 all:$(BIN)
 
 $(BIN): $(OBJS)
-	$(CC) $(CFLAGS) $(OBJS) -o $@
+	$(CC) $(CFLAGS) $(GCCOPTIONS) $(OBJS) -o $@
 
 $(OBJ)/%.o: $(SRC)/%.c
-	$(CC) $(CFLAGS) -c $< -o $@
+	$(CC) $(CFLAGS) $(GCCOPTIONS) -c $< -o $@
 
 clean:
 	$(RM) -r $(BIN) $(OBJ)/*

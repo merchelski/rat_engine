@@ -21,11 +21,4 @@ void print_bitboard(uint64_t bitboard)
 	}
 }
 
-int count_1s(uint64_t bitboard) 
-{
-	int r;
-	for(r = 0; bitboard; r++, bitboard &= bitboard - 1);
-	return r;
-}
-
 
