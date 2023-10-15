@@ -1,7 +1,11 @@
 #include <stdio.h>
 
+#include "position.h"
+#include "bitboard.h"
+#include "misc.h"
+
 int main(void)
 {
-    printf("Hello, chess!\n");
-    return 0;
+	return 0;
 }
+
