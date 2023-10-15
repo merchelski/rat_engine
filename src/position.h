@@ -7,19 +7,16 @@
 #include "misc.h"
 
 /* MACROS START */
-
 #define NUMBER_OF_BOARD_SQUARES (64)
 #define NUMBER_OF_PIECES (13)
 #define MAX_NUMBER_OF_MOVES (5949) // max theoretical is 5949
 #define NUM_RANKS (8)
 #define NUM_FILES (8)
 
+#define FILE_RANK_TO_SQUARE(file, rank) (((NUM_RANKS) * (rank)) + (file))
 /* MACROS END */
 
 /* FUNCTIONS START */
-
-int file_rank_to_square(int file, int rank);
-
 /* FUNCTIONS END */
 
 enum enum_piece
