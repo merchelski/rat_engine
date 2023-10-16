@@ -2,6 +2,7 @@
 #define MISC_H
 
 #include <stdlib.h>
+#include <stdio.h>
 
 // comment out DEBUG definition to turn off ASSERT
 #define DEBUG
