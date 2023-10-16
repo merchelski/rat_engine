@@ -91,19 +91,21 @@ struct POSITION
 	uint64_t white_pieces_bb;
 	uint64_t black_pieces_bb;
 	
-	uint16_t ply;
-	uint16_t history_ply;
+	int16_t ply;
+	int16_t history_ply;
 	
-	uint8_t piece_counts[NUMBER_OF_PIECES];
+	int8_t piece_counts[NUMBER_OF_PIECES];
 	
 	uint8_t side_to_move;
 	uint8_t en_passant_square;
-	uint8_t fifty_move_rule;
+	int8_t fifty_move_rule;
 	uint8_t castling_rights;
 	
 	uint8_t board_mb[NUMBER_OF_BOARD_SQUARES];
 };
 
 void reset_position(struct POSITION* pos);
+void print_position(const struct POSITION* pos);
+int parse_fen(struct POSITION* pos, const char* fen);
 
 #endif

@@ -17,6 +17,5 @@
 #define PEXT(bb1, bb2) _pext_u64((bb1), (bb2))
 
 
-void print_bitboard(uint64_t bitboard);
-
+extern void print_bitboard(uint64_t bitboard);
 #endif
